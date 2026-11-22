@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BottleWrap | Christian Diaz</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>BottleWrap</h1>
+    <p>Label Planning Assistant by Christian Diaz</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="measurements-title">
+      <h2 id="measurements-title">Bottle measurements</h2>
+      <p>
+        Enter measurements for one straight or tapered round section.
+        All measurements are in inches.
+      </p>
+
+      <form id="measurements" novalidate>
+        <label for="top">Top circumference</label>
+        <input
+          id="top"
+          name="top"
+          type="number"
+          step="any"
+          value="8"
+          aria-describedby="top-help top-error"
+        >
+        <small id="top-help">
+          Measure around the top edge of the label area.
+        </small>
+        <p id="top-error" class="error"></p>
+
+        <label for="bottom">Bottom circumference</label>
+        <input
+          id="bottom"
+          name="bottom"
+          type="number"
+          step="any"
+          value="10"
+          aria-describedby="bottom-help bottom-error"
+        >
+        <small id="bottom-help">
+          Measure around the bottom edge of the label area.
+        </small>
+        <p id="bottom-error" class="error"></p>
+
+        <label for="height">Section height</label>
+        <input
+          id="height"
+          name="height"
+          type="number"
+          step="any"
+          value="4"
+          aria-describedby="height-help height-error"
+        >
+        <small id="height-help">
+          Measure vertically between the top and bottom edges.
+        </small>
+        <p id="height-error" class="error"></p>
+      </form>
+
+      <p>
+        This version creates a trim outline. Bleed and seam overlap
+        will be added later.
+      </p>
+    </section>
+
+    <section aria-labelledby="preview-title">
+      <h2 id="preview-title">Template preview</h2>
+
+      <p id="status" role="status">Draft</p>
+
+      <div id="preview"></div>
+
+      <p id="dimensions"></p>
+      <p id="calculation-error" class="error" role="alert"></p>
+
+      <label>
+        <input id="review" type="checkbox" disabled>
+        I checked the measurements and preview for this template.
+      </label>
+
+      <div>
+        <button id="download-svg" type="button" disabled>
+          Download SVG
+        </button>
+
+        <button id="download-summary" type="button" disabled>
+          Download measurement record
+        </button>
+      </div>
+
+      <p id="feedback" role="status"></p>
+
+      <p>
+        Print at 100% scale and check the fit with a paper test
+        before production.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

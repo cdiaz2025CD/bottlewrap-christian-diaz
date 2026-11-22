@@ -1,0 +1,14 @@
+{
+  "name": "bottlewrap-christian-diaz",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Bottle label planning assistant by Christian Diaz",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
